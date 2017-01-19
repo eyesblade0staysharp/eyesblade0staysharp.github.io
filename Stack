@@ -1,0 +1,30 @@
+#include <iostream>
+#include <stack>
+
+using namespace std;
+
+int main()
+{
+    stack <int> rain;
+    int i,temp;
+    for (i=2000;i<2005;i++)
+    {   cout<<" Give the rainfall for the year "<<i<< "\n";
+        cin>>temp;
+        rain.push(temp);
+        temp=0;
+    }
+temp=0;
+for (i=2004;i>2000;i--)
+{
+  temp=rain.top();
+  rain.pop();
+  if (temp>rain.top())
+  {
+    cout<< i <<" Current is higher"<<endl;
+  }
+  else
+  {
+    cout<< i <<"Current is not higher"<<endl;}
+  }
+}
+
